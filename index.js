@@ -15,7 +15,7 @@ app.use(cors())
 //Establish the database connection
 
 const db = mysql.createPool({
-    host: "Server: sql11.freemysqlhosting.net",
+    host: "sql11.freemysqlhosting.net",
     user: "sql11698226",
     password: "d8nHIjvQVP",
     database: "sql11698226"
