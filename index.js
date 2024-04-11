@@ -40,6 +40,10 @@ app.listen(3000, (error)=>{
 });
 
 
+app.get("", (req, res) => {
+    res.send({ status: true, data: "successful" });
+  });
+
 app.get("/api/maintenance/records", (req, res) => {
   var sql = "SELECT * FROM maintenance";
   db.query(sql, function (error, result) {
