@@ -21,6 +21,13 @@ const db = mysql.createPool({
     database: "sql11698226"
 });
 
+// const db = mysql.createPool({
+//   host: "localhost",
+//   user: "root",
+//   password: "",
+//   database: "sadasiva_enc"
+// });
+
 db.getConnection((error)=>{
     if(error){
       console.log(error);
@@ -46,7 +53,7 @@ app.get("", (req, res) => {
 
 app.get("/api/maintenance/records", (req, res) => {
   var sql = "SELECT * FROM maintenance";
-  db.query(sql, function (error, result) {
+  db.query(sql, (error, result) => {
     if (error) {
       console.log("Error Connecting to DB");
     } else {
